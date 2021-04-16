@@ -306,6 +306,37 @@
 
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
+                <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                <form name="modal-form" class="modal-form">
+                    <div>
+                <label>Имя
+                    <input type="text" name="name" class="form-input">
+                </label>
+                
+                </div>
+                <div>
+                <label>Телефон
+                    <input type="tel" name="tel" class="form-input">
+                </label>
+                
+                </div>
+                <div>
+                    <label>Почта
+                        <input type="email" name="email" class="form-input">
+                    </label>
+                    
+                </div>
+                <div>
+                    <label>Комментарий
+                        <textarea name="comment" rows="6" class="form-input"></textarea>
+                    </label>
+                    
+
+                </div>
+                
+                <button type="submit">Отправить</button>
+                </form>
+
                 <button class="close button" data-modal-close>
                     <svg class="close-icon" width='11' height='11'>
                         <use href="./images/symbol-defs.svg#icon-close"></use>
@@ -313,7 +344,6 @@
                 </button>
             </div>
         </div>
-
     </main>
     <footer class="footer">
         <div class="container">
@@ -360,6 +390,13 @@
                         </a>
                     </li>
                 </ul>
+            </li>
+            <li class="grid-footer-item"> 
+               <p class="footer-join">Подпишитесь на рассылку</p>
+               <form name="mailing" class="mailing">
+                <input type="email" name="email" class="email-form" placeholder="E-mail"/>
+                <button class="button sign-up-btn" type="submit">Подписаться</button>
+               </form> 
             </li>
             </ul>
         </address>
