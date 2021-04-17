@@ -302,40 +302,60 @@
                 </ul>
             </div>
         </section>
+
         <!-- Модалка -->
 
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
                 <form name="modal-form" class="modal-form">
-                    <div>
-                <label>Имя
-                    <input type="text" name="name" class="form-input">
-                </label>
-                
-                </div>
-                <div>
-                <label>Телефон
-                    <input type="tel" name="tel" class="form-input">
-                </label>
-                
-                </div>
-                <div>
-                    <label>Почта
-                        <input type="email" name="email" class="form-input">
+                    <div class="modal-element">
+                    <label>Имя
+                        <div class="field field-name">
+                        <input type="text" name="name-user" class="form-input" required autocomplete="off">
+                    <svg class="field-icon">
+                        <use href="./images/symbol-defs.svg#icon-form-name"></use>
+                    </svg>
+                    </div>   
                     </label>
-                    
-                </div>
-                <div>
-                    <label>Комментарий
-                        <textarea name="comment" rows="6" class="form-input"></textarea>
-                    </label>
-                    
-
-                </div>
+                    </div>
+              
+                   <div class="modal-element">
+                       <label>Телефон
+                            <div class="field field-tel">
+                            <input type="tel" name="tel-user" class="form-input" required autocomplete="off">
+                        <svg class="field-icon">
+                            <use href="./images/symbol-defs.svg#icon-form-tel"></use>
+                        </svg>
+                        </div>
+                        </label>
+                    </div>
                 
-                <button type="submit">Отправить</button>
+                   <div class="modal-element"><label>Почта
+                    <div class="field field-email">
+                        <input type="email" name="email-user" class="form-input" required autocomplete="off"> 
+                        <svg class="field-icon">
+                            <use href="./images/symbol-defs.svg#icon-form-envelope"></use>
+                        </svg>
+                    </div>
+                </label></div>
+                    
+                    <div class="modal-element"><label>Комментарий
+                        <div class="field-comment">
+                            <textarea name="comment-user" rows="6" class="form-input comment-form" placeholder="Введите текст"></textarea>
+                        </div>
+                    </label></div>
+                    
+                    <div class="checkbox-center">
+                    <label class="checkbox-label">
+                    <input class="checkbox visually-hidden" type='checkbox'>
+                    <span class="icon-checkbox"></span>
+                    Соглашаюсь с рассылкой и принимаю <span class="contract">Условия договора</span></label>
+                        </div>
+                    <div class="field-button">
+                <button type="submit" class="sign-up-btn">Отправить</button>
                 </form>
+                </div>
 
                 <button class="close button" data-modal-close>
                     <svg class="close-icon" width='11' height='11'>

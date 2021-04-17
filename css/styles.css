@@ -126,7 +126,6 @@ p {
   background-color: var(--accent-color);
   opacity: 0;
   transition: opacity 250ms var(--cubic);
-  z-index: 1;
 }
 
 .site-nav li:not(:last-child) {
@@ -492,7 +491,7 @@ p {
   flex-basis: calc(50% - 15px);
 }
 
-.sign-up-btn::after {
+.mailing .sign-up-btn::after {
   content: "";
   margin-left: 10px;
   width: 24px;
@@ -587,15 +586,60 @@ p {
   line-height: 1.15;
   color: #212121;
   text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal-element {
+  margin-bottom: 10px;
+}
+
+.field,
+.field-comment,
+.field-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  margin-top: 4px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 35px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: transform 250ms var(--cubic);
+}
+
+.form-input:focus,
+.form-input:hover {
+  border-color: rgba(33, 150, 243, 1);
+  cursor: pointer;
+}
+
+.form-input:hover + .field-icon,
+.form-input:focus + .field-icon {
+  fill: var(--accent-color);
+}
+
+.field-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: rgba(33, 33, 33, 1);
+}
+
+.comment-form {
+  resize: none;
+  padding-left: 16px;
+}
+
+.comment-form::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  letter-spacing: 0.01em;
 }
 
 .close {
@@ -608,6 +652,51 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin-right: 8px;
   margin-top: 8px;
+}
+
+.close:hover .close-icon,
+.close:focus .close-icon {
+  fill: var(--accent-color);
+}
+
+.checkbox-center {
+  display: flex;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  background-image: url("../images/icons/not-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox:checked + .icon-checkbox {
+  background-color: var(--accent-color);
+  background-image: url("../images/icons/check.svg");
+}
+
+.contract {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.modal .sign-up-btn {
+  padding-left: 56px;
+  padding-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 /* Портфолио */
